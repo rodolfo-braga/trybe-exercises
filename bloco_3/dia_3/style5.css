@@ -26,3 +26,35 @@ ol li:nth-of-type(2n+1) {
 .lists em {
     font-weight: bold;
 }
+
+.lang li:nth-of-type(-n+3) {
+    color: blue;
+}
+
+.pink-bg {
+    background-color: pink;
+}
+
+.allies li:hover {
+    font-weight: bold;
+}
+
+.allies li a[href*="stackoverflow"]:hover {
+    color: orange;
+}
+
+.allies li a[href*="w3schools"]:hover {
+    color: green;
+}
+
+.allies li a[href*="developer.mozilla"]:hover {
+    color: black;
+}
+
+.allies li a[href*="devdocs"]:hover {
+    color: yellow;
+}
+
+.allies li a[href*="app.betrybe"]:hover {
+    color: green;
+}
