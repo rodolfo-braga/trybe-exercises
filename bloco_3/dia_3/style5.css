@@ -18,3 +18,11 @@ ol li:nth-of-type(2n+1) {
     font-size: 40px;
     border: 1px solid black;
 }
+
+.lists {
+    font-size: 20px;
+}
+
+.lists em {
+    font-weight: bold;
+}
