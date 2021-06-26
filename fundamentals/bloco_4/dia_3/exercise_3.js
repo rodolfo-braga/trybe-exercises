@@ -1,8 +1,7 @@
 //Exercício 3 - Agora inverta o lado do triângulo
-let n = 8;
+let n = 5;
 let symbol = "*";
 let space = " ";
-
 
 for (let indexRow = 0; indexRow < n; indexRow += 1) {
     let inputPlace = "";

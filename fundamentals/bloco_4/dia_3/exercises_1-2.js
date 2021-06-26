@@ -20,17 +20,6 @@ for (let index = 0; index < n; index += 1) {
 
 
 
-
-
-
-
-//Exercício 4 - Depois, faça uma pirâmide com n asteriscos de base
-
-
-
-
-
-
 //Exercício 5 - Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar
 
 
