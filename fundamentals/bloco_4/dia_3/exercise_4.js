@@ -1,7 +1,8 @@
 //Exercício 4 - Depois, faça uma pirâmide com n asteriscos de base
-let n = 15;
+let n = 5;
 let symbol = "*";
 let space = " ";
+let midOfMatrix = Math.ceil(n / 2);
 
 for (let indexRow = 0; indexRow < n; indexRow += 1) {
     let inputPlace = "";
