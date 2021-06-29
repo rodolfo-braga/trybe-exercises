@@ -12,8 +12,9 @@ function verifyPalindrome(word) {
     return isPalindrome;
 }
 
-//console.log(verifyPalindrome('arara'));
-//console.log(verifyPalindrome('desenvolvimento'));
+console.log(verifyPalindrome('arara'));
+console.log(verifyPalindrome('desenvolvimento'));
+
 
 
 //Ex. 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
@@ -30,12 +31,12 @@ function findLargestNumber() {
     return indexLargestNumber;
 }
 
-//let numbers = [2, 3, 6, 7, 10, 1];
-//console.log(findLargestNumber(...numbers));
+let numbers = [2, 3, 6, 7, 10, 1];
+console.log(findLargestNumber(...numbers));
+
 
 
 //Ex. 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
-
 
 function findSmallestNumber() {
     let indexSmallestNumber = 0;
@@ -49,6 +50,7 @@ function findSmallestNumber() {
 
 let numbers = [2, 4, 6, 7, 10, 0, -3];
 console.log(findSmallestNumber(...numbers));
+
 
 
 //Ex. 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
@@ -67,9 +69,30 @@ let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 console.log(findLargestName(...names));
 
 
+
 //Ex. 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 
+function findMostRepeatedNumber() {
+    let mostRepeated = 0;
+    let count = 0;
+    let newCount = 0;
+    for (let number in arguments) {
+        for (let index in arguments) {
+            if (arguments[number] === arguments[index]) {
+                newCount += 1;
+            }
+        }
+        if (newCount > count) {
+            mostRepeated = arguments[number];
+            count = newCount;
+        }
+        newCount = 0;
+    }
+    return mostRepeated;
+}
 
+let numbers = [2, 3, 2, 5, 8, 2, 3];
+console.log(findMostRepeatedNumber(...numbers));
 
 
 
@@ -84,3 +107,18 @@ function sumAllNumbers(N) {
 }
 
 console.log(sumAllNumbers(5));
+
+
+
+//Ex. 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+
+function verificaFimPalavra(word, ending) {
+    endingMatches = false;
+    if (word.slice(- ending.length) === ending) {
+        endingMatches = true;
+    }
+    return endingMatches;
+}
+
+console.log(verificaFimPalavra('trybe', 'be'));
+console.log(verificaFimPalavra('joaofernando', 'fernan'));
