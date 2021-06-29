@@ -65,3 +65,22 @@ function findLargestName() {
 
 let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 console.log(findLargestName(...names));
+
+
+//Ex. 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+
+
+
+
+//Ex. 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+
+function sumAllNumbers(N) {
+    let sum = 0;
+    for (let index = 1; index <= N; index += 1) {
+        sum += index;
+    }
+    return sum;
+}
+
+console.log(sumAllNumbers(5));
