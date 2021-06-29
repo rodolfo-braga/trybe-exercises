@@ -30,5 +30,24 @@ function largestNumber() {
     return indexLargestNumber;
 }
 
-let numbers = [2, 3, 6, 7, 10, 1];
-console.log(largestNumber(...numbers));
+//let numbers = [2, 3, 6, 7, 10, 1];
+//console.log(largestNumber(...numbers));
+
+
+//Ex. 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+
+function smallestNumber() {
+    let indexSmallestNumber = 0;
+    for (let index in arguments) {
+        if (arguments[index] < arguments[indexSmallestNumber]) {
+            indexSmallestNumber = index;
+        }
+    }
+    return indexSmallestNumber;
+}
+
+let numbers = [2, 4, 6, 7, 10, 0, -3];
+console.log(smallestNumber(...numbers));
+
+
