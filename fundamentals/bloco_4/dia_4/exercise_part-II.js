@@ -18,7 +18,7 @@ function verifyPalindrome(word) {
 
 //Ex. 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
-function largestNumber() {
+function findLargestNumber() {
     let indexLargestNumber = 0;
     let largest = Number();
     for (let index = 0; index < arguments.length; index += 1) {
@@ -31,13 +31,13 @@ function largestNumber() {
 }
 
 //let numbers = [2, 3, 6, 7, 10, 1];
-//console.log(largestNumber(...numbers));
+//console.log(findLargestNumber(...numbers));
 
 
 //Ex. 3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 
 
-function smallestNumber() {
+function findSmallestNumber() {
     let indexSmallestNumber = 0;
     for (let index in arguments) {
         if (arguments[index] < arguments[indexSmallestNumber]) {
@@ -48,6 +48,20 @@ function smallestNumber() {
 }
 
 let numbers = [2, 4, 6, 7, 10, 0, -3];
-console.log(smallestNumber(...numbers));
+console.log(findSmallestNumber(...numbers));
 
 
+//Ex. 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+function findLargestName() {
+    let largestName = '';
+    for (let name in arguments) {
+        if (arguments[name].length > largestName.length) {
+            largestName = arguments[name];
+        }
+    }
+    return largestName;
+}
+
+let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+console.log(findLargestName(...names));
