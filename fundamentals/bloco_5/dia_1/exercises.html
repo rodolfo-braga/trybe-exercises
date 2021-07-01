@@ -77,9 +77,13 @@
         correctTitle();
 
         //5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function paragraphToUpperCase() {
+            let paragraph = document.getElementsByTagName('p')[2];
+            return paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+        }
+        paragraphToUpperCase();
 
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-
     </script>
   </body>
 </html>
