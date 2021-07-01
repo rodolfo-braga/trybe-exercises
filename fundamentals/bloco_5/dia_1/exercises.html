@@ -49,17 +49,32 @@
         - document.getElementsByTagName()
         1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         */
-        function changeText(element, newText) {
-            let selectedElement = document.getElementsByTagName(element);
-            return selectedElement[0].innerText = newText;
+        function changeParagraphText() {
+            let paragraph = document.getElementsByTagName('p')[0];
+            return paragraph.innerHTML = 'Trabalhando como <strong>Desenvolvedor Web</strong> remotamente para uma empresa estrangeira, e percorrendo esse Brasilzão morando por algum tempo em cada região.';
         }
-        changeText('p', 'Me vejo trabalhando como desenvolvedor web para uma empresa estrangeira remotamente, e percorrendo esse Brasilzão morando por algum tempo em cada região.');
+        changeParagraphText();
 
         //2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+        function changeBgYellowToGreen() {
+            let main = document.getElementsByClassName('main-content')[0];
+            return main.style.backgroundColor = 'rgb(76,164,109)';
+        }
+        changeBgYellowToGreen();
+
         //3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        function changeBgRedToWhite() {
+            let center = document.getElementsByClassName('center-content')[0];
+            return center.style.backgroundColor = 'white';
+        }
+        changeBgRedToWhite();
+
         //4. Crie uma função que corrija o texto da tag <h1>.
+
         //5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+
     </script>
   </body>
 </html>
