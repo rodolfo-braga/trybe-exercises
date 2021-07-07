@@ -75,3 +75,21 @@ function createFridayButton(buttonName) {
 }
 
 createFridayButton('Sexta-feira');
+
+//Exercício 5
+function changeFridaysText () {
+  let btnFriday = document.querySelector('#btn-friday');
+  let fridays = document.querySelectorAll('.friday');
+
+  btnFriday.addEventListener('click', function () {
+    for (let index = 0; index < fridays.length; index += 1) {
+      if (fridays[index].innerText === 'SEXTOU!') {
+        fridays[index].innerText = Number(fridays[index].previousElementSibling.innerText) + 1;
+      } else {
+        fridays[index].innerText = 'SEXTOU!';
+      };
+    };
+  });
+};
+
+changeFridaysText();
