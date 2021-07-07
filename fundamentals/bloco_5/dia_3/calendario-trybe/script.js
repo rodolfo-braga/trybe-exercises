@@ -93,3 +93,27 @@ function changeFridaysText () {
 };
 
 changeFridaysText();
+
+//Exercício 6
+function zoomIn() {
+  let getDays = document.querySelectorAll('.day');
+  
+  for (let index = 0; index < getDays.length; index += 1) {
+    getDays[index].addEventListener('mouseover', function (event) {
+      event.target.style.fontSize = '60px';
+    });
+  };
+};
+
+function zoomOut() {
+  let getDays = document.querySelectorAll('.day');
+
+  for (let index = 0; index < getDays.length; index += 1) {
+    getDays[index].addEventListener('mouseout', function (event) {
+      event.target.style.fontSize = '20px';
+    });
+  };
+};
+
+zoomIn();
+zoomOut();
