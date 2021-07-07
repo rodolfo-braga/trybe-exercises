@@ -36,4 +36,12 @@ function createDaysOfTheWeek() {
 
   createDaysOfTheMonth();
   
-  
+  //Exercício 2
+  function createButton(buttonName) {
+      const button = document.createElement('button');
+      button.innerText = buttonName;
+      button.id = 'btn-holiday';
+      document.querySelector('.buttons-container').appendChild(button);
+  }
+
+  createButton('Feriados');
