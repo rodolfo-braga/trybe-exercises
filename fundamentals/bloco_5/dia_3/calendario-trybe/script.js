@@ -157,3 +157,23 @@ function selectTask() {
 };
 
 selectTask();
+
+//Exercício 10
+function addTaskColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  let monthDays = document.querySelector('#days');
+
+  monthDays.addEventListener('click', function(event) {
+    if (event.target.style.color !== taskColor && selectedTask.length > 0) {
+      let selectedColor = selectedTask[0].style.backgroundColor;
+      event.target.style.color = selectedColor;
+    } else if (event.target.style.color === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    };
+  });
+};
+
+addTaskColor();
