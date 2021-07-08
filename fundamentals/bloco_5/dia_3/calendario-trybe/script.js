@@ -117,3 +117,43 @@ function zoomOut() {
 
 zoomIn();
 zoomOut();
+
+//Exercício 7
+function newTaskSpan(task) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName);
+};
+
+newTaskSpan('Projeto: Arte com Pixels');
+
+//Exercício 8
+function newTaskDiv(color) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
+};
+
+newTaskDiv('blue');
+
+//Exercício 9
+function selectTask() {
+  let taskColor = document.querySelector('.task');
+
+  taskColor.addEventListener('click', function(event) {
+    if (event.target.className === 'task selected') {
+      event.target.classList.remove('selected');
+    } else {
+      event.target.classList.add('selected');
+    };
+  });
+};
+
+selectTask();
