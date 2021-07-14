@@ -177,3 +177,31 @@ function addTaskColor() {
 };
 
 addTaskColor();
+
+//Bônus
+function addAppointment() {
+  let getTaskList = document.querySelector('.task-list');
+  let newInput = document.querySelector('#task-input');
+  let inputBtn = document.querySelector('#btn-add');
+
+  function createAppointment(){
+    if (newInput.value !== '') {
+      let listItem = document.createElement('li');
+      listItem.innerHTML = newInput.value;
+      getTaskList.appendChild(listItem);
+      newInput.value = '';
+    } else {
+      window.alert('Escreva o seu compromisso e depois clique em Adicionar.');
+    }
+  }
+
+  inputBtn.addEventListener('click', createAppointment);
+  newInput.addEventListener('keypress', function(event){
+    let key = event.keyCode;
+    if (key === 13) {
+      createAppointment();
+    };
+  });
+};
+
+addAppointment();
