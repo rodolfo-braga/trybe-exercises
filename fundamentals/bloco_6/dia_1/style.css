@@ -27,6 +27,7 @@ body {
 
 fieldset {
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 .line-content {
@@ -48,4 +49,9 @@ fieldset {
 
 #address {
   width: 510px;
+}
+
+button {
+  padding: 7px;
+  border-radius: 15px;
 }
