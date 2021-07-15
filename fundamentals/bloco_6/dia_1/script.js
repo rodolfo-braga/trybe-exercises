@@ -8,3 +8,13 @@ for (let index = 0; index < statesInitials.length; index += 1) {
   state.innerHTML = statesInitials[index];
   selectState.appendChild(state);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+}
+
+window.onload = () => {
+  let btnSubmit = document.querySelector('#btn-submit');
+  btnSubmit.addEventListener('click', handleSubmit);
+}
