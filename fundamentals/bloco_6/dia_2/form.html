@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header class="ui center aligned header">
+    <h1>Cadastre seu currículo</h1>
+  </header>
+  <main>
+    <form action="" method="get" class="ui form container">
+      <h4 class="ui dividing header">Dados pessoais</h4>
+        <div class="field required">
+          <label>Nome:</label>
+          <input type="text" name="name">
+        </div>
+        <!-- <div class="fields">
+          <div class="ten wide field  required">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" maxlength="50" required>
+          </div>
+          <div class="six wide field required">
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+          </div>
+        </div>
+        <div class="field required">
+          <label for="address">Endereço:</label>
+          <input type="text" name="address" id="address" maxlength="200" required>
+        </div>
+        <div class="fields">
+          <div class="eight wide field required">
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" id="city" maxlength="28" required>
+          </div>
+          <div class="field required">
+            <label for="state">Estado:</label>
+            <select class="ui fluid dropdown" name="state" id="state">
+              <option disabled selected value>Selecione seu estado</option>
+            </select>
+          </div>
+        </div>
+        <div class="grouped fields">
+          <label>Tipo:</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <label for="houseTypeH">Casa</label>
+              <input type="radio" name="houseType" id="houseTypeH" tabindex="0" class="hidden" value="house">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <label for="houseTypeA">Apartamento</label>
+              <input type="radio" name="houseType" id="houseTypeA" tabindex="0" class="hidden" value="apartment">
+            </div>
+          </div>
+        </div>
+      <h4 class="ui dividing header">Dados do seu último emprego</h4>
+        <div class="field required">
+          <label for="resume">Resumo do currículo:</label>
+          <textarea name="resume" id="resume" maxlength="1000"  cols="67" rows="3" required></textarea>
+        </div>
+        <div class="field required">
+          <label for="post">Cargo:</label>
+          <input type="text" name="post" id="post" maxlength="40" required>
+        </div>
+        <div class="field required">
+          <label for="jobDescription">Descrição do Cargo:</label>
+          <input type="text" name="jobDescription" id="jobDescription" maxlength="500" required>
+        </div>
+        <div class="four wide field required">
+          <label for="startDate">Data de Início:</label>
+          <input type="text" name="startDate" id="datepicker">
+        </div> -->
+      <button class="ui primary submit button" id="btn-submit" type="submit">Enviar</button>
+    </form>
+  </main>
+  <section class="form-data"></section>
+  <script src="node_modules/pikaday/pikaday.js"></script>
+  <script>
+    let picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    $('.ui.form')
+      .form({
+        fields: {
+          name: {
+            identifier: 'name',
+            rules: [{
+                type   : 'empty',
+                prompt : 'Por favor insira o seu nome'
+              }, {
+                type   : 'maxLength[40]',
+              }]
+          }
+          // ,
+          // email: {
+          //   identifier: 'email',
+          //   rules: [{
+          //       type   : 'email',
+          //       prompt : 'Por favor insira um e-mail válido'
+          //     }, {
+          //       type   : 'maxLength[50]',
+          //     }]
+          // },
+          // cpf: {
+          //   identifier: 'cpf',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor insira o seu CPF'
+          //     }, {
+          //       type   : 'maxLength[11]',
+          //     }]
+          // },
+          // address: {
+          //   identifier: 'address',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor insira o seu endereço'
+          //     }, {
+          //       type   : 'maxLength[200]',
+          //     }]
+          // },
+          // city: {
+          //   identifier: 'city',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor insira a sua cidade'
+          //     }, {
+          //       type   : 'maxLength[28]',
+          //     }]
+          // },
+          // state: {
+          //   identifier: 'state',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor selecione o seu estado'
+          //     }]
+          // },
+          // residenceType: {
+          //   identifier: 'residenceType',
+          //   rules: [{
+          //       type   : 'checked',
+          //       prompt : 'Por favor selecione o tipo da sua residência'
+          //     }]
+          // },
+          // resume: {
+          //   identifier: 'resume',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor o resumo do seu currículo'
+          //     }, {
+          //       type   : 'maxLength[1000]',
+          //     }]
+          // },
+          // post: {
+          //   identifier: 'post',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor o seu cargo'
+          //     }, {
+          //       type   : 'maxLength[40]',
+          //     }]
+          // },
+          // jobDescription: {
+          //   identifier: 'jobDescription',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor insira a descrição do cargo'
+          //     }, {
+          //       type   : 'maxLength[500]',
+          //     }]
+          // },
+          // startDate: {
+          //   identifier: 'startDate',
+          //   rules: [{
+          //       type   : 'empty',
+          //       prompt : 'Por favor selecione a data de início'
+          //   }]
+          // }
+        }
+      })
+    ;
+  </script>
+</body>
+</html>
