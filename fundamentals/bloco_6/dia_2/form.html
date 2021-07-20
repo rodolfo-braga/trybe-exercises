@@ -19,29 +19,30 @@
   </header>
   <main>
     <form action="" method="get" class="ui form container">
+      <div class="ui error message"></div>
       <h4 class="ui dividing header">Dados pessoais</h4>
         <div class="field required">
           <label>Nome:</label>
           <input type="text" name="name">
         </div>
-        <!-- <div class="fields">
+        <div class="fields">
           <div class="ten wide field  required">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" maxlength="50" required>
+            <input type="email" name="email" id="email" maxlength="50">
           </div>
           <div class="six wide field required">
             <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            <input type="text" name="cpf" id="cpf" maxlength="11">
           </div>
         </div>
         <div class="field required">
           <label for="address">Endereço:</label>
-          <input type="text" name="address" id="address" maxlength="200" required>
+          <input type="text" name="address" id="address" maxlength="200">
         </div>
         <div class="fields">
           <div class="eight wide field required">
             <label for="city">Cidade:</label>
-            <input type="text" name="city" id="city" maxlength="28" required>
+            <input type="text" name="city" id="city" maxlength="28">
           </div>
           <div class="field required">
             <label for="state">Estado:</label>
@@ -68,21 +69,22 @@
       <h4 class="ui dividing header">Dados do seu último emprego</h4>
         <div class="field required">
           <label for="resume">Resumo do currículo:</label>
-          <textarea name="resume" id="resume" maxlength="1000"  cols="67" rows="3" required></textarea>
+          <textarea name="resume" id="resume" maxlength="1000"  cols="67" rows="3"></textarea>
         </div>
         <div class="field required">
           <label for="post">Cargo:</label>
-          <input type="text" name="post" id="post" maxlength="40" required>
+          <input type="text" name="post" id="post" maxlength="40">
         </div>
         <div class="field required">
           <label for="jobDescription">Descrição do Cargo:</label>
-          <input type="text" name="jobDescription" id="jobDescription" maxlength="500" required>
+          <input type="text" name="jobDescription" id="jobDescription" maxlength="500">
         </div>
         <div class="four wide field required">
           <label for="startDate">Data de Início:</label>
           <input type="text" name="startDate" id="datepicker">
-        </div> -->
+        </div>
       <button class="ui primary submit button" id="btn-submit" type="submit">Enviar</button>
+      <div class="ui clear button">Apagar tudo</div>
     </form>
   </main>
   <section class="form-data"></section>
@@ -91,107 +93,5 @@
     let picker = new Pikaday({ field: document.getElementById('datepicker') });
   </script>
   <script type="text/javascript" src="script.js"></script>
-  <script>
-    $('.ui.form')
-      .form({
-        fields: {
-          name: {
-            identifier: 'name',
-            rules: [{
-                type   : 'empty',
-                prompt : 'Por favor insira o seu nome'
-              }, {
-                type   : 'maxLength[40]',
-              }]
-          }
-          // ,
-          // email: {
-          //   identifier: 'email',
-          //   rules: [{
-          //       type   : 'email',
-          //       prompt : 'Por favor insira um e-mail válido'
-          //     }, {
-          //       type   : 'maxLength[50]',
-          //     }]
-          // },
-          // cpf: {
-          //   identifier: 'cpf',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor insira o seu CPF'
-          //     }, {
-          //       type   : 'maxLength[11]',
-          //     }]
-          // },
-          // address: {
-          //   identifier: 'address',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor insira o seu endereço'
-          //     }, {
-          //       type   : 'maxLength[200]',
-          //     }]
-          // },
-          // city: {
-          //   identifier: 'city',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor insira a sua cidade'
-          //     }, {
-          //       type   : 'maxLength[28]',
-          //     }]
-          // },
-          // state: {
-          //   identifier: 'state',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor selecione o seu estado'
-          //     }]
-          // },
-          // residenceType: {
-          //   identifier: 'residenceType',
-          //   rules: [{
-          //       type   : 'checked',
-          //       prompt : 'Por favor selecione o tipo da sua residência'
-          //     }]
-          // },
-          // resume: {
-          //   identifier: 'resume',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor o resumo do seu currículo'
-          //     }, {
-          //       type   : 'maxLength[1000]',
-          //     }]
-          // },
-          // post: {
-          //   identifier: 'post',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor o seu cargo'
-          //     }, {
-          //       type   : 'maxLength[40]',
-          //     }]
-          // },
-          // jobDescription: {
-          //   identifier: 'jobDescription',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor insira a descrição do cargo'
-          //     }, {
-          //       type   : 'maxLength[500]',
-          //     }]
-          // },
-          // startDate: {
-          //   identifier: 'startDate',
-          //   rules: [{
-          //       type   : 'empty',
-          //       prompt : 'Por favor selecione a data de início'
-          //   }]
-          // }
-        }
-      })
-    ;
-  </script>
 </body>
 </html>
