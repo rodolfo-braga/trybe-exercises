@@ -10,19 +10,15 @@ function sortByTech(listOfTechs) {
   });
 }
 
-function techList(tech, name) {
-  const listOfTechs = tech.reduce((acc, currentTech) => {
-    const techObj = {
-      tech: currentTech,
+function techList(techs, name) {
+  if (techs.length === 0) return 'Vazio!';
+
+  const listOfTechs = techs.map((tech) => {
+    return {
+      tech,
       name,
     }
-    acc.push(techObj);
-    return acc;
-  }, []);
-
-  if (listOfTechs.length === 0) {
-    return 'Vazio!';
-  }
+  });
 
   return sortByTech(listOfTechs);
 }
