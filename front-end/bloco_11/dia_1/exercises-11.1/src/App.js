@@ -6,10 +6,14 @@ const Task = (value) => {
   );
 }
 
-function App() {
-  return (
-    <ul>{Task('Primeiro item')}</ul>
-    );
-}
+const taskList = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir trabalhar'];
+
+    class App extends React.Component {
+      render() {
+        return (
+          <ul>{ taskList.map(task => Task(task)) }</ul>
+        );
+      }
+    }
 
 export default App;
