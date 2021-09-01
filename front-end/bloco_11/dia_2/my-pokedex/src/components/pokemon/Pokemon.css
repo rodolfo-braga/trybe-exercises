@@ -1,0 +1,16 @@
+.pokemon {
+  border: 1px solid rgba(80, 80, 80, 0.685);
+  display: flex;
+  flex-flow: column wrap;
+  height: 120px;
+  border-radius: 10px;
+  justify-content: center;
+  flex: 1 0 300px;
+  margin: 10px;
+  align-content: space-around;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.63);
+}
+
+.infos {
+  text-align: center;
+}
